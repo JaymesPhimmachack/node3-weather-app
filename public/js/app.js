@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (event) => {
   messageOne.textContent = 'Loading...';
   messageTwo.textContent = '';
 
-  fetch(`https://0a4bab96e4ee44dfac8aa896fa62b423.vfs.cloud9.us-east-2.amazonaws.com/weather?address=${location}`).then((response) => {
+  fetch(`/weather?address=${location}`).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         messageOne.textContent = data.error;

@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const hbs = require("hbs");
 const forecast = require("./utils/forecast");
 const geocode = require("./utils/geocode");
